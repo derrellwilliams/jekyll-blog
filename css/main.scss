@@ -1,6 +1,8 @@
 ---
 ---
 
+/*******Universal Style******/
+
 @charset "utf-8";
 
 ::selection      {background: rgb(255,255,158);}
@@ -24,6 +26,10 @@ body {
   margin: 0;
 }
 
+img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: #474747;
@@ -39,11 +45,9 @@ $textgrey: #515151;
   clear: both;
 }
 
-h1 {
-  font-family: 'gt_walsheim_medium', 'helvetica';
-  font-size: 55px;
-  color: $green;
-}
+
+/*******Header******/
+
 
 #header {
   height: 70px;
@@ -98,6 +102,53 @@ h1 {
   }
 }
 
+/*******Image Layout******/
+
+.page-content{
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+.wrap{
+  img {
+    margin-top: 20px;
+  }
+
+  
+  p {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 18px;
+    color: $purple;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+  h1 {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 55px;
+    color: $green;
+    margin: 0;
+  }
+
+  h4, h5 {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 14px;
+    color: $purple;
+    margin: 0;
+    text-align: center;
+  }
+
+  h5{
+    color: $green;
+  }
+}
+
+
+
+/*******Footer******/
+
 footer {
   background-color: #343434;
   height: 77px;
@@ -133,13 +184,4 @@ footer {
     color: #807e7e;
     }
   }
-}
-
-#about_footer{
-  margin-top: 0px;
-}
-
-#contact_footer{
-  bottom: 0;
-  position: absolute;
 }
