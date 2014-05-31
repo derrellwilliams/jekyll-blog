@@ -102,7 +102,47 @@ $textgrey: #515151;
   }
 }
 
-/*******Image Layout******/
+/*******Mobile Header******/
+@media screen and (max-width: 480px)  {
+
+  #header {
+  height: 100px;
+
+  .header-wrap {
+    padding-top: 14px;
+  }
+
+  .logo {
+    float: none;
+    text-align: center; 
+    margin: 0px 14px 5px 20px;
+    @include transition;
+  }
+
+  ul {
+    list-style: none;
+    float: none;
+    padding: 0px;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+
+  li {
+      padding-right: 35px;
+      color: #474747;
+
+      &:last-child{
+        padding-right: 0px;
+      }
+    }
+  }
+}
+  .rights {
+    display: none;
+  }
+}
+
+/*******Layout******/
 
 .page-content{
   .wrap {
@@ -112,7 +152,7 @@ $textgrey: #515151;
 
 .wrap{
   img {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   
@@ -138,12 +178,44 @@ $textgrey: #515151;
     color: $purple;
     margin: 0;
     text-align: center;
+    padding-top: 5px;
   }
 
   h5{
     color: $green;
   }
 }
+
+
+/*******Pagination******/
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  .page-labels {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    color: #D2D2CD;
+    margin: 0px 10px;
+  }
+  a.page-labels {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    text-align: center;
+    color: $purple;
+    margin: 0px 6px;
+
+
+    &:hover {
+      border-bottom: 3px solid $purple;
+      color: $green;
+      @include transition;
+    }
+  }
+
 
 
 
