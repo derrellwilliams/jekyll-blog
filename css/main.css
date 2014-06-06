@@ -1,0 +1,267 @@
+---
+---
+
+/*******Universal Style******/
+
+@charset "utf-8";
+
+::selection      {background: rgb(255,255,158);}
+::-moz-selection   {background: rgb(255,255,158);}
+img::selection     {background: transparent;}
+img::-moz-selection  {background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+@mixin transition {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background-color: #e5e5e5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #474747;
+}
+
+$green: #00b490;
+$purple: #5a5090;
+$textgrey: #515151;
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*******Header******/
+
+
+#header {
+  height: 70px;
+  background-color: rgba(255, 255, 255, .95);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  top: 0;
+
+  .logo {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-size: 25px;
+    float: left;
+    margin: 14px 0 0 20px;
+    color: $green;
+    border: 4px solid #eaeaea;
+    padding: 1px 5px 1px 5px;
+    @include transition;
+  }
+
+  a:hover .logo {
+        border: 4px solid $purple;
+        color: $purple;
+
+  }
+  
+  img {
+    float: left;
+    margin: 15px 0 0 20px;
+  }
+
+  ul {
+    list-style: none;
+    float: right;
+    padding: 8px;
+
+  li {
+      display: inline;
+      font-family: 'gt_walsheim_bold','helvetica';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding-right: 30px;
+      color: #474747;
+
+        & :hover {
+          border-bottom: 3px solid $purple;
+          @include transition;
+        }
+    }
+  }
+}
+
+/*******Mobile Header******/
+@media screen and (max-width: 480px)  {
+
+  #header {
+  height: 100px;
+
+  .header-wrap {
+    padding-top: 14px;
+  }
+
+  .logo {
+    float: none;
+    text-align: center; 
+    margin: 0px 14px 5px 20px;
+    @include transition;
+  }
+
+  ul {
+    list-style: none;
+    float: none;
+    padding: 0px;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+
+  li {
+      padding-right: 35px;
+      color: #474747;
+
+      &:last-child{
+        padding-right: 0px;
+      }
+    }
+  }
+}
+  .rights {
+    display: none;
+  }
+}
+
+/*******Layout******/
+
+.page-content{
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+.wrap{
+  img {
+    margin-top: 40px;
+  }
+
+  
+  p {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 18px;
+    color: $purple;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+  h1 {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 55px;
+    color: $green;
+    margin: 0;
+  }
+
+  h4, h5 {
+    font-family: 'gt_walsheim_medium', 'helvetica';
+    font-size: 14px;
+    color: $purple;
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  h5{
+    color: $green;
+  }
+
+  a.caption-link {
+  }
+
+  a.date-link {
+    color: $green;
+  }
+
+}
+
+
+/*******Pagination******/
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  .page-labels {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    color: #D2D2CD;
+    margin: 0px 10px;
+  }
+  a.page-labels {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    text-align: center;
+    color: $purple;
+    margin: 0px 6px;
+
+
+    &:hover {
+      border-bottom: 3px solid $purple;
+      color: $green;
+      @include transition;
+    }
+  }
+
+
+
+
+/*******Footer******/
+
+footer {
+  background-color: #343434;
+  height: 77px;
+  width: 100%;
+  clear: both;
+  margin-top: 30px;
+
+  .rights {
+    float: left;
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 25px 0 0 20px;
+  }
+
+  .versions {
+    font-family: 'gt_walsheim_bold', 'helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #9c9a9a;
+    margin: 10px 0 0 20px;
+    text-align: left;
+    clear: both;
+    padding: 0;
+    line-height: 0px;
+
+    a{
+    color: #807e7e;
+    }
+  }
+}
