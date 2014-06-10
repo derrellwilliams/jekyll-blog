@@ -147,7 +147,7 @@ $textgrey: #515151;
 .page-content{
   .wrap {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
   }
 
 .wrap{
@@ -193,6 +193,17 @@ $textgrey: #515151;
   }
 
 }
+
+  .image_3 {
+    width: 32.6%;
+    float: left;
+    padding-right: 10px;
+  }
+
+  .image_3:last-child {
+    padding-right: 0px;
+    float: left;
+  }
 
 
 /*******Pagination******/
