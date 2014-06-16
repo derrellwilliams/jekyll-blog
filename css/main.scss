@@ -193,23 +193,44 @@ $textgrey: #515151;
   }
 
 }
+/*******Layout for 2 images across******/
+
+.image_1-2 {
+    width: 49.5%;
+    padding-right: 1%;
+    display: inline-block;
+  }
+
+  .image_2-2 {
+    width: 49.5%;
+    padding-right: 0%;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 640px)  {
+    .image_1-2, .image_2-2, {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
+
 
 /*******Layout for 3 images across******/
 
-  .image_1, .image_2 {
+  .image_1-3, .image_2-3 {
     width: 32%;
     padding-right: 1%;
     display: inline-block;
   }
 
-  .image_3 {
+  .image_3-3 {
     width: 32%;
     padding-right: 0%;
     display: inline-block;
   }
 
   @media screen and (max-width: 640px)  {
-    .image_1, .image_2, .image_3 {
+    .image_1-3, .image_2-3, .image_3-3 {
       width: 100%;
       padding-right: 0%;
     }
