@@ -142,7 +142,7 @@ $textgrey: #515151;
   }
 }
 
-/*******Layout******/
+/*******Basic Layout******/
 
 .page-content{
   .wrap {
@@ -194,16 +194,31 @@ $textgrey: #515151;
 
 }
 
-  .image_3 {
-    width: 32.6%;
-    float: left;
-    padding-right: 10px;
+/*******Layout for 3 images across******/
+
+  .image_1, .image_2 {
+    width: 32%;
+    padding-right: 1%;
+    display: inline-block;
   }
 
-  .image_3:last-child {
-    padding-right: 0px;
-    float: left;
+  .image_3 {
+    width: 32%;
+    padding-right: 0%;
+    display: inline-block;
   }
+
+  @media screen and (max-width: 640px)  {
+    .image_1, .image_2, .image_3 {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
+
+/*******Layout for 2 equal images across******/
+
+
+
 
 
 /*******Pagination******/
