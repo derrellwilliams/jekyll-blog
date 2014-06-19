@@ -150,12 +150,6 @@ $textgrey: #515151;
     width: 70%;
   }
 
-.wrap{
-  img {
-    margin-top: 40px;
-  }
-
-  
   p {
     font-family: 'gt_walsheim_medium', 'helvetica';
     font-size: 18px;
@@ -181,28 +175,48 @@ $textgrey: #515151;
     padding-top: 5px;
   }
 
-  h5{
+  h5 {
     color: $green;
-  }
-
-  a.caption-link {
   }
 
   a.date-link {
     color: $green;
   }
 
-}
+  .post {
+    margin-top: 40px;
+  }
 /*******Layout for 2 images across******/
 
 .image_1-2 {
-    width: 49.5%;
-    padding-right: 1%;
+    width: 49.1%;
+    padding-right: .75%;
     display: inline-block;
   }
 
   .image_2-2 {
-    width: 49.5%;
+    width: 49.1%;
+    padding-right: 0%;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 640px)  {
+    .image_1-2, .image_2-2, {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
+
+  /*******Layout for 2 images long across******/
+
+.image_1-2long {
+    width: 70%;
+    padding-right: .75%;
+    display: inline-block;
+  }
+
+  .image_2-2long {
+    width: 27%;
     padding-right: 0%;
     display: inline-block;
   }
@@ -236,7 +250,33 @@ $textgrey: #515151;
     }
   }
 
-/*******Layout for 2 equal images across******/
+    @media screen and (max-width: 640px)  {
+    .image_1-3, .image_2-3, .image_3-3 {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
+
+/*******Layout for 6 images across******/
+
+  .image_1-6, .image_2-6, .image_3-6, .image_4-6, .image_5-6, {
+    width: 32%;
+    padding-right: .8%;
+    display: inline-block;
+  }
+
+  .image_6-6 {
+    width: 32%;
+    padding-right: 0%;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 640px)  {
+    .image_1-6, .image_2-6, .image_3-6, .image_4-6, .image_5-6, .image_6-6 {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
 
 
 
