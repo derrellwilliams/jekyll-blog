@@ -1,0 +1,63 @@
+---
+layout: tr
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+        <div class="page-content">
+        	<div class="wrap">
+				<h5 class="description">TRIP REPORT</h5>
+          		<h1> {{ page.title }} </h1>       
+			</div>
+
+          {% if page.image %}
+              <img src="{{ site.baseurl }}/images/{{ page.image}}"  alt="{{ page.title }}">
+              <h4 class="image-caption">{{ page.image-caption }}</h4>
+          {% endif %}
+
+			<div class="wrap">
+			<!--- <h5> {{ page.date | date: "%B %d, %Y" }} </h5> -->
+				{% if page.image-small-left %}
+				  <div class="image-small-left-wrap">
+				      <img class="image-small-left" src="{{ site.baseurl }}/images/{{ page.image-small-left}}"  alt="{{ page.title }}">
+				      <h4 class="image-small-left-caption">{{ page.image-small-left-caption }}</h4>
+				      
+				      {% if page.image-small-left-2 %}
+				      	<img class="image-small-left" src="{{ site.baseurl }}/images/{{ page.image-small-left-2}}"  alt="{{ page.title }}">
+				      	<h4 class="image-small-left-caption-2">{{ page.image-small-left-caption-2 }}</h4>
+				      {% endif %}
+					</div>
+				{% endif %}
+
+			<p class="page-copy"> {{ page.copy }} </p>
+
+			{% if page.image-full-center %}
+				<img src="{{ site.baseurl }}/images/{{ page.image-full-center}}"  alt="{{ page.title }}">
+				<h4 class="image-caption">{{ page.image-caption }}</h4>
+			{% endif %}
+
+			<div class="image-bottom-group group">
+	          {% if page.image-left-half %}
+	              <img class="image-left-half" src="{{ site.baseurl }}/images/{{ page.image-left-half}}"  alt="{{ page.title }}">
+	          {% endif %}
+
+	          {% if page.image-right-half %}
+	              <img class="image-right-half" src="{{ site.baseurl }}/images/{{ page.image-right-half}}"  alt="{{ page.title }}">
+	          {% endif %}
+
+	          {% if page.image-left-half-2 %}
+	              <img class="image-left-half-2" src="{{ site.baseurl }}/images/{{ page.image-left-half-2}}"  alt="{{ page.title }}">
+	          {% endif %}
+
+	          {% if page.image-right-half-2 %}
+	              <img class="image-right-half-2" src="{{ site.baseurl }}/images/{{ page.image-right-half-2}}"  alt="{{ page.title }}">
+	          {% endif %}
+          	</div>
+		{{ content }}
+        </div>
+      </div>
+    {% include footer.html %}
+  </body>
+</html>

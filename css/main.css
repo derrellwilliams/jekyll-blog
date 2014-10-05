@@ -168,7 +168,7 @@ $textgrey: #515151;
   h1 {
     font-family: 'gt_walsheim_medium', 'helvetica';
     font-size: 55px;
-    color: $green;
+    color: $gray;
     margin: 0;
   }
 

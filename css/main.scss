@@ -146,7 +146,7 @@ $textgrey: #515151;
 
 .page-content{
   .wrap {
-    margin: 0 auto;
+    margin: 35px auto 25px auto;
     width: 70%;
   }
 
@@ -161,8 +161,8 @@ $textgrey: #515151;
 
   h1 {
     font-family: 'gt_walsheim_medium', 'helvetica';
-    font-size: 55px;
-    color: $green;
+    font-size: 38px;
+    color: $textgrey;
     margin: 0;
   }
 
@@ -173,11 +173,19 @@ $textgrey: #515151;
     margin: 0;
     text-align: center;
     padding-top: 5px;
+    font-weight: bold;
   }
 
   h5 {
     color: $green;
   }
+
+  h5.description {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: -5px;
+  }
+
 
   a.date-link {
     color: $green;
@@ -278,6 +286,57 @@ $textgrey: #515151;
       padding-right: 0%;
     }
   }
+
+
+/*******Layout for Trip Report******/
+
+.image-small-left-wrap {
+  width: 40%;
+  float: left;
+  margin-right: 3%;
+}
+
+.image-small-left-caption, .image-small-left-caption-2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.image-full-center {
+  width: 100%;
+}
+
+.image-bottom-group {
+  margin: 40px 0;
+}
+
+.image-left-half, .image-right-half, .image-left-half-2, .image-right-half-2 {
+  width: 49%;
+  float: left;
+  margin: 10px 0;
+}
+
+.image-left-half, .image-left-half-2 {
+  margin-right: 2%;
+}
+
+p.page-copy {
+  color: $textgrey;
+  line-height: 28px;
+  overflow: hidden;
+}
+
+p::first-letter { 
+  float: left; 
+  color: #fff;
+  background-color: $purple; 
+  font-size: 40px; 
+  padding: 13px;
+  margin-right: 6px;
+  font-weight: 600;
+  border-radius: 4px;
+} 
+
+
 
 
 
