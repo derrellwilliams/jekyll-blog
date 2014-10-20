@@ -4,17 +4,17 @@ layout: tr
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+
   <body>
     {% include header.html %}
         <div class="page-content">
         	<div class="wrap">
 				<h5 class="description">TRIP REPORT</h5>
-          		<h1> {{ page.title }} </h1>       
+          		<h1 class="tr-page-title"> {{ page.title }} </h1>       
 			</div>
 
-          {% if page.image %}
-              <img src="{{ site.baseurl }}/images/{{ page.image}}"  alt="{{ page.title }}">
-              <h4 class="image-caption">{{ page.image-caption }}</h4>
+          {% if page.image-main %}
+              <img src="{{ site.baseurl }}/images/{{ page.image-main}}"  alt="{{ page.title }}">
           {% endif %}
 
 			<div class="wrap">
@@ -35,25 +35,63 @@ layout: tr
 
 			{% if page.image-full-center %}
 				<img src="{{ site.baseurl }}/images/{{ page.image-full-center}}"  alt="{{ page.title }}">
-				<h4 class="image-caption">{{ page.image-caption }}</h4>
+				<h4 class="image-caption">{{ page.image-caption-full-center }}</h4>
 			{% endif %}
 
-			<div class="image-bottom-group group">
-	          {% if page.image-left-half %}
-	              <img class="image-left-half" src="{{ site.baseurl }}/images/{{ page.image-left-half}}"  alt="{{ page.title }}">
-	          {% endif %}
+			{% if page.image-full-center-2 %}
+				<img src="{{ site.baseurl }}/images/{{ page.image-full-center-2}}"  alt="{{ page.title }}">
+				<h4 class="image-caption">{{ page.image-caption-full-center-2 }}</h4>
+			{% endif %}
 
-	          {% if page.image-right-half %}
-	              <img class="image-right-half" src="{{ site.baseurl }}/images/{{ page.image-right-half}}"  alt="{{ page.title }}">
-	          {% endif %}
+			
+			<div id="container">
+		          {% if page.image-left-half %}
+		              <div class="item">
+		             	<img class="image image-left-half" src="{{ site.baseurl }}/images/{{ page.image-left-half}}"  alt="{{ page.title }}">
+		              </div>-
+		          {% endif %}
 
-	          {% if page.image-left-half-2 %}
-	              <img class="image-left-half-2" src="{{ site.baseurl }}/images/{{ page.image-left-half-2}}"  alt="{{ page.title }}">
-	          {% endif %}
+		          {% if page.image-right-half %}
+		          	<div class="item">
+						<img class="image image-right-half" src="{{ site.baseurl }}/images/{{ page.image-right-half}}"  alt="{{ page.title }}">
+		             </div>
+		          {% endif %}
 
-	          {% if page.image-right-half-2 %}
-	              <img class="image-right-half-2" src="{{ site.baseurl }}/images/{{ page.image-right-half-2}}"  alt="{{ page.title }}">
-	          {% endif %}
+		          {% if page.image-left-half-2 %}
+		              <div class="item">
+		              	<img class="image-left-half-2" src="{{ site.baseurl }}/images/{{ page.image-left-half-2}}"  alt="{{ page.title }}">
+		              </div>
+		          {% endif %}
+
+		          {% if page.image-right-half-2 %}
+		              <div class="item">
+						<img class="image-right-half-2" src="{{ site.baseurl }}/images/{{ page.image-right-half-2}}"  alt="{{ page.title }}">
+						</div>
+		          {% endif %}
+
+		          {% if page.image-left-half-3 %}
+		          	<div class="item">
+		              <img class="image-left-half-3" src="{{ site.baseurl }}/images/{{ page.image-left-half-3}}"  alt="{{ page.title }}">
+		            </div>
+		          {% endif %}
+
+		          {% if page.image-right-half-3 %}
+		          	<div class="item">
+		              <img class="image-right-half-3" src="{{ site.baseurl }}/images/{{ page.image-right-half-3}}"  alt="{{ page.title }}">
+		            </div>
+		          {% endif %}
+
+		          {% if page.image-left-half-4 %}
+		          	<div class="item">
+		              <img class="image-left-half-4" src="{{ site.baseurl }}/images/{{ page.image-left-half-4}}"  alt="{{ page.title }}">
+		            </div>
+		          {% endif %}
+
+		          {% if page.image-right-half-4 %}
+		          	<div class="item">
+		              <img class="image-right-half-4" src="{{ site.baseurl }}/images/{{ page.image-right-half-4}}"  alt="{{ page.title }}">
+		            </div>
+		          {% endif %}
           	</div>
 		{{ content }}
         </div>

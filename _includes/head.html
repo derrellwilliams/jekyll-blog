@@ -1,16 +1,34 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+   <meta name="viewport" content="width=device-width">
+   <meta name="description" content="{{ site.description }}">
+   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/main.scss" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/ss-social.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+   <link rel="stylesheet" href="{{ "/css/main.scss" | prepend: site.baseurl }}">
+   <link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}">
+   <link rel="stylesheet" href="{{ "/css/ss-social.css" | prepend: site.baseurl }}">
+   <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script src="/js/modernizr-transitions.js"></script>
+   <script src="/js/jquery.masonry.min.js"></script>
+   <script src="/js/jquery.imagesloaded.min.js"></script>
+   <script>
+     $(function(){
+
+       var $container = $('#container');
+     
+       $container.imagesLoaded( function(){
+         $container.masonry({
+            itemSelector : '.item',
+            gutterWidth: 10
+         });
+       });
+     
+     });
+   </script>
 
 </head>
