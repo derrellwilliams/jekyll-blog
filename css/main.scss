@@ -19,6 +19,10 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
   transition: all 0.2s ease-in-out;
 }
 
+$green: #00b490;
+$purple: #5a5090;
+$textgrey: #515151;
+
 body {
   background-color: #e5e5e5;
   text-rendering: optimizeLegibility;
@@ -32,17 +36,26 @@ img {
 
 a {
   text-decoration: none;
-  color: #474747;
+  color: $green;
 }
 
-$green: #00b490;
-$purple: #5a5090;
-$textgrey: #515151;
+a:hover {
+  color: $purple;
+}
+
+h4 a {
+  color: $purple;
+}
 
 .group:after {
   content: "";
   display: table;
   clear: both;
+}
+
+h3 {
+  font-family: 'gt_walsheim_bold', 'helvetica';
+  font-weight: 500;
 }
 
 
@@ -334,20 +347,6 @@ $textgrey: #515151;
   margin: 40px 0;
 }
 
-.image-left-half, .image-right-half, .image-left-half-2, .image-right-half-2, .image-left-half-3, .image-right-half-3, .image-left-half-4, .image-right-half-4 {
-  margin: 0;
-}
-
-#container {
-  margin-top: 20px;
-  width: auto;
-}
-
-.item {
-  width: 49.5%;
-  margin-bottom: 10px;
-}
-
 @media screen and (max-width: 1400px)  {
 
   .item {
@@ -363,20 +362,15 @@ $textgrey: #515151;
     width: 48.3%;
     margin-bottom: 0px;
   }
-
 }
 
 @media screen and (max-width: 550px)  {
-
   .item {
     width: 100%;
     margin-bottom: 0px;
   }
 
 }
-
-
-
 
 p.page-copy {
   color: $textgrey;
@@ -396,9 +390,71 @@ p::first-letter {
   border-radius: 4px;
 } 
 
+.image-container {
+  position: relative;
+  width: 100%;
+
+  .tr-link-note {
+    padding: 15px 20px;
+    background-color: $green;
+    opacity: .9;
+    right: 10px;
+    top: 25px;
+    position: absolute;
+    border-radius: 1000px;
+    width: 90px;
+    height: 100px;
+    @include transition;
 
 
+    h4, h5, .arrow {
+      color: #fff;
+      text-align: center;
+      line-height: 14px;
+      font-size: 13px;
+    }
 
+    h4.arrow {
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'gt_walsheim_bold', 'helvetica';
+      color: #fff;
+      margin: 8px 0 0 0px;
+      padding: 0px;
+    }
+
+    h4 {
+      color: $purple;
+    }
+  }
+}
+
+.tr-link-note:hover {
+  background-color: $purple;
+
+  h4 {
+    color: $green;
+  }
+}
+
+.back-button {
+  text-align: center;
+  padding: 6px 15px;
+  background-color: $purple;
+  color: #fff;
+  width: 25%;
+  margin: 30px auto;
+  border-radius: 3px;
+  @include transition;
+}
+
+.back-button h3 {
+  color: #fff;
+}
+
+.back-button:hover {
+  background-color: $green;
+}
 
 
 

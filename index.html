@@ -13,6 +13,27 @@ layout: default
     {% endif %} 
   </div>
 {% endif %}
+
+  <!-- Trip Report POst --> 
+  {% if post.image-tr %}
+  <div class="post"> 
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+      <div class="image-container">
+        <img src="{{ site.baseurl }}/images/{{ post.image-tr }}" alt="{{ page.title }}">
+        <div class="tr-link-note">
+          <h4 class="arrow">→</h4>
+          <h4>TRIP REPORT:</h4>
+          <h5>See and read more about this trip</h5>
+        </div>
+      </div>
+    </a>
+    {% if post.title %}
+    {% endif %} 
+  </div>
+{% endif %}
+
+
+
   <!-- Two Image Post -->   
 
   {% if post.image1-2 %}
