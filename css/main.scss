@@ -437,12 +437,13 @@ p::first-letter {
   }
 }
 
+
 .back-button {
   text-align: center;
   padding: 6px 15px;
   background-color: $purple;
   color: #fff;
-  width: 25%;
+  width: 35%;
   margin: 30px auto;
   border-radius: 3px;
   @include transition;
@@ -456,6 +457,15 @@ p::first-letter {
   background-color: $green;
 }
 
+@media screen and (max-width: 500px)  {
+  .tr-link-note {
+    display: none;
+  }
+
+  .back-button {
+    width: 45%;
+  }
+}
 
 
 /*******Pagination******/
